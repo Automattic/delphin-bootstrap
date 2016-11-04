@@ -52,6 +52,8 @@ Note this installation process **can take quite some time** the first time you p
 3. Install all necessary packages such as Git, Node.js, or NPM
 4. Download the Delphin repository
 
+Finally, just add `127.0.0.1 delphin.localhost` to your `hosts` file.
+
 ### Running
 
 You should have a virtual machine up and running by now. The next step is simply to connect to this sandbox via SSH with your favorite terminal or console, either by typing `vagrant ssh`, or using the following parameters:
@@ -103,7 +105,7 @@ Server listening on http://localhost:1337
 Backend listening on http://localhost:1338
 ```
 
-You should now be able to access Delphin in your browser at http://localhost:1337!
+You should now be able to access Delphin in your browser at http://delphin.localhost:1337!
 
 ### Hacking
 
