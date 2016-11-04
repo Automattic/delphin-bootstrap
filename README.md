@@ -49,7 +49,7 @@ Note this installation process **can take quite some time** the first time you p
 
 1. Download an image of the current stable version of Ubuntu
 2. Load it into the virtual machine and update it
-3. Install all necessary packages such as Git, Node.js, or NPM
+3. Install all necessary packages such as Git or Node.js
 4. Download the Delphin repository
 
 Finally, just add `127.0.0.1 delphin.localhost` to your `hosts` file.
@@ -89,19 +89,19 @@ vagrant@delphin:~$ cd /var/sources
 The first step is to build Delphin, which can be a lengthy process the first time because that will download all dependencies:
 
 ```
-vagrant@delphin:/var/sources$ npm install
+vagrant@delphin:/var/sources$ yarn install
 ```
 
 Then the only step left is just starting the application with:
 
 ```
-vagrant@delphin:/var/sources$ npm start
+vagrant@delphin:/var/sources$ yarn start
 ```
 
 Hopefully at some point you'll see:
 
 ```
-Server listening on http://localhost:1337
+Server listening on http://delphin.localhost:1337
 Backend listening on http://localhost:1338
 ```
 
@@ -111,7 +111,7 @@ You should now be able to access Delphin in your browser at http://delphin.local
 
 The Delphin repository is located in `/var/sources` on the sandbox. **This isn't a shared folder** (i.e. a directory that is shared between the virtual machine - the guest system - and your own computer - the host system). This was done for performance reason as well as to work around a number of limitations (most of them originating from running Windows as host system).
 
-With Delphin Bootstrap you can either work from the virtual machine itself or from your computer. In the former case, you would edit files in the `/var/sources` folder directly. In the latter, you would have to clone the Delphin repository to your computer and edit files there using your favorite editing tools. You would then have to sync this repository with the one on the sandbox in `/var/sources` using a tool such as [rsync](https://en.wikipedia.org/wiki/Rsync) or [unison](http://www.cis.upenn.edu/~bcpierce/unison/). In both cases, Delphin will pick up the changes, potentially rebuild some files, and serve them when you reload a page in your browser.
+With Delphin Bootstrap you can either work from the virtual machine itself or from your computer. In the former case, you would edit files in the `/var/sources` folder directly. In the latter, you would have to clone the Delphin repository to your computer and edit files there using your favorite editing tools. You would then have to sync this repository with the one on the sandbox in `/var/sources` using a tool such as [rsync](https://en.wikipedia.org/wiki/Rsync) or [unison](http://www.cis.upenn.edu/~bcpierce/unison/). In both cases, Delphin will pick up the changes, potentially rebuild some files, and apply them to the page in your browser.
 
 ### Relaxing
 
