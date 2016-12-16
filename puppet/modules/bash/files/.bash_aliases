@@ -4,12 +4,12 @@ alias l="ls --almost-all --group-directories-first -l --time-style=long-iso"
 
 # Delphin aliases
 alias cds="cd /var/sources"
-alias nc="npm run clean"
-alias nca="npm run clean:all"
-alias ni="npm install"
-alias nl="npm run lint"
-alias ns="npm start"
-alias nt="npm test"
+alias yc="yarn run clean"
+alias yca="yarn run clean:all"
+alias yi="yarn install"
+alias yl="yarn run lint"
+alias ys="yarn start"
+alias yt="yarn test"
 
 # Git aliases
 alias gb="git branch"
